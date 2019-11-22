@@ -5,9 +5,11 @@
 Essentially this will be a basketball trivia game. After clicking the initital title button, they will enter a page with five or so multiple choice questions. The user will go through this quiz and be given a score that determines if ball is life for him/her along with a winner or loser message.
 
 ## API
-The API I will be using is the free Ball Don't Lie 
+The API's I will be using is the free Ball Don't Lie 
 
 https://balldontlie.io/api/v1/players
+
+https://www.balldontlie.io/api/v1/teams
 
 The type of date this takes is player info from all over the NBA. Here's an example of Anthony Davis
 
@@ -25,4 +27,5 @@ Light-hearted, multiple choice questions. Will need to return a score that measu
 
 
 ## Stretch Goals
-Have an easy and a hard mode
+
+Create a easy or hard mode
