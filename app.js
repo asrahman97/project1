@@ -6,7 +6,7 @@ window.onload = function () {
   const questionBox = document.querySelector('#question-container')
   const questionElement = document.querySelector('#question')
   const answerElement = document.querySelector('#answer-buttons')
-  let currentQuestion = 0;
+  let currentQuestion;
   let score = 0; 
   
 
@@ -16,6 +16,10 @@ window.onload = function () {
 
     console.log(results)
     startButton.addEventListener('click', startQuiz)
+    nextButton.addEventListener('click', function () {
+      currentQuestion += 1;
+      nextQuestion();
+    })
   }
 
   sample();
@@ -24,11 +28,16 @@ window.onload = function () {
     console.log('Game started')
     startButton.classList.add('hide')
     questionBox.classList.remove('hide')
+    currentQuestion = 0
     nextQuestion()
   }
 
-  function nextQuestion(multipleChoice) {
-    questionElement.innerText = multipleChoice.question
+  // function test() {
+
+  // }
+
+  function nextQuestion(question) {
+    questionElement.innerText = multipleChoice[currentQuestion].question
   }
 
   function selectChoice() {
@@ -45,10 +54,10 @@ window.onload = function () {
     },
 
     {
-      question: 'What conference does (key) play in?',
+      question: 'What conference does (key.eastTeam) play in?',
       answers: [
-        { text: 'key', correct: true },
-        { text: 'false', correct: false }
+        { text: 'east', correct: true },
+        { text: 'west', correct: false }
       ]
     },
 
@@ -61,10 +70,10 @@ window.onload = function () {
     },
 
     {
-      question: 'What conference does (key) play in?',
+      question: 'What conference does (key.west) play in?',
       answers: [
-        { text: 'key', correct: true },
-        { text: 'false', correct: false }
+        { text: 'west', correct: true },
+        { text: 'east', correct: false }
       ]
     },
 
