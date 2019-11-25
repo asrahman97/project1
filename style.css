@@ -40,10 +40,23 @@ body {
 }
 
 .btn:hover {
-  border-color: black;
+  border-color: red;
 }
+
+/* .btn-grid:hover {
+  border-color: red;
+} */
 
 .start-btn, .next-btn {
   font-size: 1rem;
   padding: 10px 30px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
 }
