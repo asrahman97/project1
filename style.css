@@ -1,8 +1,5 @@
-/* *, *::before, *::after {
-  background-sizing: border;
-} */
-
 body {
+  background-image: url('https://jibennett.com/wp-content/uploads/2014/02/basketball-court-floor1.jpg');
   padding: 0;
   margin: 0;
   display: flex;
@@ -10,4 +7,43 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
+}
+
+
+.container {
+  width: 500px;
+  max-width: 80%;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 0 10px 5px;
+}
+
+#question {
+  font-family: 'Volkhov', serif;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.btn-grid {
+  display: grid;
+  margin: 25px 0;
+  gap: 10px;
+}
+
+.btn {
+ 
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.start-btn, .next-btn {
+  font-size: 1rem;
+  padding: 10px 30px;
 }
