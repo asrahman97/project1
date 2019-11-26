@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Volkhov&display=swap" rel="stylesheet">
+  <meta charset='UTF-8'>
+  <meta class='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel='stylesheet' href='style.css'>
+  <link href='https://fonts.googleapis.com/css?family=Volkhov&display=swap' rel='stylesheet'>
   <title>Is Ball Life?</title>
 </head>
 <body>
@@ -14,25 +14,44 @@
     
     <div id = 'question'>Question</div>
     <div id = 'answer-buttons' class= 'btn-grid btn'>
-      <button>Choice 1</button>
-      <button>Choice 2</button>
-      <button>Choice 3</button>
-      <button>Choice 4</button>
+      <form id = 'quiz' class = 'quiz'>
+        
+        <p class = 'questions'>What team does (key) play for? (placeholder)</p>
+        <input type = 'radio' id = 'mc' name = 'question1' class = 'question1' value = 'key'> key1<br>
+        <input type = 'radio' id = 'mc' name = 'question1' value = 'wrong'> wrong<br>
+        
+        <p class = 'questions'>What conference does (key.eastTeam) play in?</p>
+        
+        <input type = 'radio' id = 'mc' name = 'question2' class = 'question2' value = 'key'> key2<br>
+        <input type = 'radio' id = 'mc' name = 'question2' value = 'wrong'> wrong<br>
+
+        <p class = 'questions'>What conference does (key.westTeam) play in?</p>
+        
+        <input type = 'radio' id = 'mc' name = 'question3' class = 'question3' value = 'key'> key3<br>
+        <input type = 'radio' id = 'mc' name = 'question3' value = 'wrong'> wrong<br>
+
+        <input id = "button" type = "button" value = "Grade me">
 
 
     </div>
+    <div>
+      <p class = 'correct'></p>
+      <p class = 'greeting'></p>
+      <img class = 'gif'>
+    </div>
+
     </div>
 
     <div class = 'controls'>
       <button id = 'start-btn' class = 'start-btn btn'>Is Ball Life?</button>
-      <button id = 'next-btn' class= 'next-btn btn hide'>Next</button>
+      <!-- <button id = 'next-btn' class= 'next-btn btn hide'>Next</button> -->
     </div>
   </div>
 
 
 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="app.js"></script>
+  <script src='https://unpkg.com/axios/dist/axios.min.js'></script>
+  <script src='app.js'></script>
 
 </body>
 

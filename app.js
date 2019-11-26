@@ -6,43 +6,88 @@ window.onload = function () {
   const questionBox = document.querySelector('#question-container')
   const questionElement = document.querySelector('#question')
   const answerElement = document.querySelector('#answer-buttons')
-  let currentQuestion;
-  let score = 0; 
+  const gradeButton = document.querySelector('#button')
+  // let currentQuestion;
+  
   
 
-  async function sample() {
-    let results = await axios.get("https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players")
+  // function sample() {
+  // async function sample(evt) {
+  //   let results = await axios.get("https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players")
+
+    
+    
+
+    // console.log(results)
+  startButton.addEventListener('click', startQuiz)
+    // nextButton.addEventListener('click', function () {
+    //   currentQuestion += 1;
+      // nextQuestion();
+// }
+//     )
+  // }
+
+  // sample();
 
 
-    console.log(results)
-    startButton.addEventListener('click', startQuiz)
-    nextButton.addEventListener('click', function () {
-      currentQuestion += 1;
-      nextQuestion();
-    })
-  }
+  gradeButton.addEventListener('click', grade)
 
-  sample();
+  console.log(document.querySelector('.question1').value)
 
-  function startQuiz() {
+  function startQuiz(evt) {
+    evt.preventDefault()
     console.log('Game started')
     startButton.classList.add('hide')
     questionBox.classList.remove('hide')
-    currentQuestion = 0
-    nextQuestion()
+
+    // currentQuestion = 0
+    // setNextQuestion()
   }
 
-  // function test() {
 
+
+
+
+  // function setNextQuestion() {
+  //   resetState()
+  //   nextQuestion()
   // }
 
-  function nextQuestion(question) {
-    questionElement.innerText = multipleChoice[currentQuestion].question
-  }
+  // function nextQuestion(question) {
+    // questionElement.innerText = multipleChoice[currentQuestion].question
+    // multipleChoice[currentQuestion].answers.forEach(answer => {
+    //   const button = document.createElement('button')
+    //   button.innerText = answer.text
+    //   button.classList.add('btn')
+    //   if (answer.correct) {
+    //     button.dataset.correct = answer.correct
+    //   }
+    //   button.addEventListener('click', selectChoice)
+    //   answerElement.appendChild(button)
+    // })
+  // }
 
-  function selectChoice() {
+  // function resetState() {
+  //   nextButton.classList.add('hide')
+  //   while (answerElement.firstChild) {
+  //     answerElement.removeChild(answerElement.firstChild)
+  //   }
+  // }
 
-  }
+
+  // function selectChoice(e) {
+  //   const selectedButton = e.target
+  //   const correct = selectedButton.dataset.correct
+  //   Array.from(answerElement.children).forEach(button => {
+  //     if (multipleChoice.length > currentQuestion + 1) {
+  //       nextButton.classList.remove('hide')
+  //     } else {
+  //       startButton.innerText = 'Restart'
+  //       startButton.classList.remove('hide')
+  //     }
+ 
+  //   })
+  // }
 
   const multipleChoice = [
     {
@@ -90,4 +135,3 @@ window.onload = function () {
   ]
 
 }
-
