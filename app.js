@@ -9,9 +9,9 @@ window.onload = function () {
   const gradeButton = document.querySelector('#button')
   let score = 0; 
 
-  const question1 = document.querySelector('.question1');
-  const question2 = document.querySelector('.question2');
-  const question3 = document.querySelector('.question3');
+  let question1 = document.querySelector('.question1');
+  let question2 = document.querySelector('.question2');
+  let question3 = document.querySelector('.question3');
   
 
   // function sample() {
@@ -71,10 +71,16 @@ window.onload = function () {
     console.log(dataObject)
     document.querySelector('#questionNumber1').innerHTML = `What team does ${dataObject.first_name} ${dataObject.last_name} play for?`
 
+    document.querySelector('#radioText1').innerHTML += `kdbsfaihbfi`
+
     document.querySelector('#questionNumber2').innerHTML = `What division does he play in?`
 
+    document.querySelector('#radioText2').innerHTML += `afkjsdbflajshb`
+
     document.querySelector('#questionNumber3').innerHTML = `What city does he play in?`
-    
+
+    document.querySelector('#radioText3').innerHTML += `adjfhkbashgd`
+
     // for (key in dataObject) {
     //   console.log(dataObject[key])
       
