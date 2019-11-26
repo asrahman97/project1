@@ -35,6 +35,60 @@ window.onload = function () {
   
 
  
+  // async function sample(evt) {
+
+  //   let results = await axios.get("https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players")
+  //   console.log(results)
+  //   console.log(results.data.data[Math.floor(Math.random() * 26)])
+  //   const randomPlayer = results.data.data[Math.floor(Math.random() * 26)]
+
+  //   document.querySelector('#questionNumber1').innerHTML += `${randomPlayer}`
+
+  // }  
+  // https://www.balldontlie.io/api/v1/players/Math.floor(Math.random() * 101)
+  
+
+  // console.log(sample())
+
+
+  const ball_URL = 'https://balldontlie.io/api/v1/players/'
+  const randomFunction = Math.floor(Math.random() * 450)
+  const herokuURL = 'https://cors-anywhere.herokuapp.com/'
+  const baseURL = `${herokuURL}${ball_URL}${randomFunction}`
+
+
+  async function sample(evt) {
+
+    let results = await axios.get(baseURL)
+    console.log(results)
+   
+
+    const dataObject = results.data
+    const playersTeam = results.data.team
+
+    // console.log(results.data.data[Math.floor(Math.random() * 26)])
+    // const randomPlayer = results.data.data[Math.floor(Math.random() * 26)]
+    console.log(dataObject)
+    document.querySelector('#questionNumber1').innerHTML = `What team does ${dataObject.first_name} ${dataObject.last_name} play for?`
+
+    document.querySelector('#questionNumber2').innerHTML = `What division does he play in?`
+
+    document.querySelector('#questionNumber3').innerHTML = `What city does he play in?`
+    
+    // for (key in dataObject) {
+    //   console.log(dataObject[key])
+      
+    //   document.querySelector('#questionNumber1').innerHTML += `${dataObject.first_name}`
+
+    // }
+
+
+  }  
+  https://www.balldontlie.io/api/v1/players/Math.floor(Math.random() * 101)
+  
+
+  console.log(sample())
+
 
 
   startButton.addEventListener('click', startQuiz)
