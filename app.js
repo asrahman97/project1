@@ -36,7 +36,7 @@ window.onload = function () {
 
   
 
-  // console.log(question1.checked)
+ 
 
 
   startButton.addEventListener('click', startQuiz)
@@ -59,16 +59,16 @@ window.onload = function () {
 
   function grade() {
 
-    if (question1.value.checked === "true1") {
+    if (question1.checked == true) {
       score++;
       console.log('q1 is right')
     } else {
       console.log('q1 is wrong')
     }
-    if (question2.value === "true2") {
+    if (question2.checked == true) {
       score++;
     }
-    if (question3.value === "true3") {
+    if (question3.checked == true) {
       score++;
     }
 
