@@ -2,15 +2,19 @@ window.onload = function () {
 
 
   const startButton = document.querySelector('.start-btn')
-  const nextButton = document.querySelector('.next-btn')
+  // const nextButton = document.querySelector('.next-btn')
   const questionBox = document.querySelector('#question-container')
-  const questionElement = document.querySelector('#question')
-  const answerElement = document.querySelector('#answer-buttons')
+  // const questionElement = document.querySelector('#question')
+  // const answerElement = document.querySelector('#answer-buttons')
   const gradeButton = document.querySelector('#button')
   let score = 0; 
+
+  const question1 = document.querySelector('.question1');
+  const question2 = document.querySelector('.question2');
+  const question3 = document.querySelector('.question3');
   // let currentQuestion;
   
-  
+  // question1.addEventListener('click', )
 
   // function sample() {
   // async function sample(evt) {
@@ -32,7 +36,7 @@ window.onload = function () {
 
   
 
-  console.log(document.querySelector('.question1').value)
+  // console.log(question1.checked)
 
 
   startButton.addEventListener('click', startQuiz)
@@ -54,19 +58,17 @@ window.onload = function () {
   gradeButton.addEventListener('click', grade);
 
   function grade() {
-    let questionNumber1 = document.querySelector('.question1');
-    let questionNumber2 = document.querySelector('.question2');
-    let questionNumber3 = document.querySelector('.question3');
-  
 
-
-    if (questionNumber1.value === 'true1') {
+    if (question1.value.checked === "true1") {
+      score++;
+      console.log('q1 is right')
+    } else {
+      console.log('q1 is wrong')
+    }
+    if (question2.value === "true2") {
       score++;
     }
-    if (questionNumber2.value === 'true2') {
-      score++;
-    }
-    if (questionNumber3.value === 'true3') {
+    if (question3.value === "true3") {
       score++;
     }
 
