@@ -12,9 +12,7 @@ window.onload = function () {
   const question1 = document.querySelector('.question1');
   const question2 = document.querySelector('.question2');
   const question3 = document.querySelector('.question3');
-  // let currentQuestion;
   
-  // question1.addEventListener('click', )
 
   // function sample() {
   // async function sample(evt) {
@@ -78,29 +76,15 @@ window.onload = function () {
 
     document.querySelector('.greeting').innerHTML = greeting[score];
     document.querySelector('.correct').innerHTML = (`You got ${score} correct`);
-    document.querySelector('.gif').src = gifs[score]
+    document.querySelector('.gif').src = gifs[score];
+    document.querySelector('.restart-btn').classList.remove('hide')
     console.log(score);
   }
 
 
-  // function setNextQuestion() {
-  //   resetState()
-  //   nextQuestion()
-  // }
+ 
 
-  // function nextQuestion(question) {
-    // questionElement.innerText = multipleChoice[currentQuestion].question
-    // multipleChoice[currentQuestion].answers.forEach(answer => {
-    //   const button = document.createElement('button')
-    //   button.innerText = answer.text
-    //   button.classList.add('btn')
-    //   if (answer.correct) {
-    //     button.dataset.correct = answer.correct
-    //   }
-    //   button.addEventListener('click', selectChoice)
-    //   answerElement.appendChild(button)
-    // })
-  // }
+ 
 
   // function resetState() {
   //   nextButton.classList.add('hide')
@@ -109,64 +93,6 @@ window.onload = function () {
   //   }
   // }
 
-
-  // function selectChoice(e) {
-  //   const selectedButton = e.target
-  //   const correct = selectedButton.dataset.correct
-  //   Array.from(answerElement.children).forEach(button => {
-  //     if (multipleChoice.length > currentQuestion + 1) {
-  //       nextButton.classList.remove('hide')
-  //     } else {
-  //       startButton.innerText = 'Restart'
-  //       startButton.classList.remove('hide')
-  //     }
  
-  //   })
-  // }
-
-  // const multipleChoice = [
-  //   {
-  //     question: 'What team does (key) play for?',
-  //     answers: [
-  //       { text: 'false', correct: false },
-  //       { text: 'key', correct: true }
-  //     ]
-  //   },
-
-  //   {
-  //     question: 'What conference does (key.eastTeam) play in?',
-  //     answers: [
-  //       { text: 'east', correct: true },
-  //       { text: 'west', correct: false }
-  //     ]
-  //   },
-
-  //   {
-  //     question: 'What division do the (key) play in?',
-  //     answers: [
-  //       { text: 'key', correct: true },
-  //       { text: 'false', correct: false }
-  //     ]
-  //   },
-
-  //   {
-  //     question: 'What conference does (key.west) play in?',
-  //     answers: [
-  //       { text: 'west', correct: true },
-  //       { text: 'east', correct: false }
-  //     ]
-  //   },
-
-  //   {
-  //     question: 'What team does (key) play for?',
-  //     answers: [
-  //       { text: 'false', correct: false },
-  //       { text: 'key', correct: true }
-  //     ]
-  //   }
-
-
-    
-  // ]
 
 }
