@@ -65,21 +65,22 @@ window.onload = function () {
 
     const dataObject = results.data
     const playersTeam = results.data.team
-
+console.log(playersTeam.full_name)
     // console.log(results.data.data[Math.floor(Math.random() * 26)])
     // const randomPlayer = results.data.data[Math.floor(Math.random() * 26)]
     console.log(dataObject)
     document.querySelector('#questionNumber1').innerHTML = `What team does ${dataObject.first_name} ${dataObject.last_name} play for?`
+    document.querySelector('#radioText1').innerHTML = `${playersTeam.name}`
 
-    document.querySelector('#radioText1').innerHTML += `kdbsfaihbfi`
+
 
     document.querySelector('#questionNumber2').innerHTML = `What division does he play in?`
 
-    document.querySelector('#radioText2').innerHTML += `afkjsdbflajshb`
+    document.querySelector('#radioText2').innerHTML = `${playersTeam.division}`
 
     document.querySelector('#questionNumber3').innerHTML = `What city does he play in?`
 
-    document.querySelector('#radioText3').innerHTML += `adjfhkbashgd`
+    document.querySelector('#radioText3').innerHTML = `${playersTeam.city}`
 
     // for (key in dataObject) {
     //   console.log(dataObject[key])
