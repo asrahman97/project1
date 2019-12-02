@@ -131,6 +131,8 @@ console.log(playersTeam.full_name)
       score++;
     }
 
+    gradeButton.classList.add('hide');
+
     const gifs = ['https://media.giphy.com/media/IW8yMvU2iAN8c/giphy.gif', 'https://media.giphy.com/media/NWZ13Q6pwwfi8/giphy.gif', 'https://media.giphy.com/media/l2YWs9vhysuUzdZAc/giphy.gif', 'https://media.giphy.com/media/l0MYHiW8ozFLda6ze/giphy.gif']
     
     const greeting = ['Scrub', 'A for Effort', 'Ball is almost Life', 'You da GOAT']

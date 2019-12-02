@@ -39,16 +39,17 @@ body {
   outline: none;
 }
 
-.btn:hover {
+/* .btn:hover {
   border-color: red;
-}
+} */
 
 /* .btn-grid:hover {
   border-color: red;
 } */
 
-.start-btn, .next-btn {
-  font-size: 1rem;
+
+.start-btn, .next-btn, .grade-btn {
+  font-size: 2rem;
   padding: 10px 30px;
 }
 
@@ -57,6 +58,19 @@ body {
   justify-content: center;
 }
 
+
 .hide {
   display: none;
+}
+
+@media (max-width: 600px) {
+ 
+  .start-btn {
+    padding: 100px;
+    }
+
+    .quiz {
+      font-size: 1.5rem;
+    }
+
 }
